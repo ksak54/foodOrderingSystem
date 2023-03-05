@@ -3,6 +3,8 @@ package com.food.ordering.system;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 class Dog {
@@ -26,6 +28,7 @@ public class demo {
   System.out.println(aDog.getName().equals("Max")); // true
   System.out.println(aDog.getName().equals("Fifi")); // false
   System.out.println(aDog == oldDog);// true
+  System.out.println(UUID.randomUUID());
  }
 
  public static void foo(Dog d) {

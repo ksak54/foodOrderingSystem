@@ -101,7 +101,7 @@ public class Order extends AggregateRoot<OrderId> {
     private void validateItemPrice(OrderItem orderItem) {
         if(!orderItem.isPriceValid()) {
             throw new OrderDomainException(String.format("Order item price: %s is not valid for product: %s",
-                    price.getAmount(), orderItem.getProduct().getId().getValue()));
+                    orderItem.getPrice().getAmount(), orderItem.getProduct().getId().getValue()));
         }
     }
 
